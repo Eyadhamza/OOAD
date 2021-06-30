@@ -11,7 +11,7 @@ namespace OOAD
          // Set up Rick’s guitar inventory
          Inventory inventory = new Inventory();
          InitializeInventory(inventory);
-         GuitarSpec whatErinLikes = new GuitarSpec(Builder.FENDER, "Stratocastor", Type.ELECTRIC,Wood.ALDER, Wood.ALDER);
+         GuitarSpec whatErinLikes = new GuitarSpec(10,Builder.FENDER, "Stratocastor", Type.ELECTRIC,Wood.ALDER, Wood.ALDER);
 
          List<Guitar> matchingGuitars = inventory.Search(whatErinLikes);
 

@@ -29,13 +29,12 @@
             set => _spec = value;
         }
 
-        public Guitar(GuitarSpec spec, double price, string serialNumber)
+        public Guitar( double price, string serialNumber,GuitarSpec spec)
         {
-            this._spec = spec;
             this._price = price;
             this._serialNumber = serialNumber;
+            this._spec = spec;
 
-            // this._spec = new GuitarSpec();
         }
 
 

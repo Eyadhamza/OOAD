@@ -6,6 +6,11 @@
         private double _price;
         private GuitarSpec _spec;
 
+        public Guitar(GuitarSpec spec)
+        {
+            _spec = spec;
+        }
+
         public string SerialNumber
         {
             get => _serialNumber;
@@ -29,6 +34,8 @@
             this._spec = spec;
             this._price = price;
             this._serialNumber = serialNumber;
+
+            // this._spec = new GuitarSpec();
         }
 
 

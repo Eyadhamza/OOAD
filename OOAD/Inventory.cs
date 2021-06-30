@@ -23,14 +23,34 @@ namespace OOAD
 
         }
 
-        public Guitar GetGuitar()
+        public List<Guitar> GetGuitar()
         {
-            return null;
+
+
         }
 
-        public List<Guitar> Search()
+        public List<Guitar> Search(GuitarSpec searchSpec)
         {
-            return null;
+            List<Guitar> matchingGuitars = new List<Guitar>();
+            foreach (Guitar guitar in matchingGuitars)
+            {
+                GuitarSpec guitarSpec = guitar.Spec;
+                if (searchSpec.Builder != guitarSpec.Builder)
+                    continue;
+                string model = searchSpec.Model.ToLower();
+                if ((!model.Equals("")) &&
+                    (!model.Equals(guitarSpec.Model.ToLower())))
+                    continue;
+                if (searchSpec.Type != guitarSpec.Type)
+                    continue;
+                if (searchSpec.BackWood != guitarSpec.BackWood)
+                    continue;
+                if (searchSpec.TopWood != guitarSpec.TopWood)
+                    continue;
+                matchingGuitars.Add(guitar);
+            }
+            return matchingGuitars;
+
         }
     }
 }

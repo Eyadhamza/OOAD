@@ -42,13 +42,10 @@ namespace OOAD
             List<Guitar> matchingGuitars = new List<Guitar>();
             foreach (Guitar guitar in matchingGuitars)
             {
-                GuitarSpec guitarSpec = guitar.Spec;
                 if (guitar.Spec.Matches(searchSpec))
                 {
                     matchingGuitars.Add(guitar);
-
                 }
-
             }
             return matchingGuitars;
 

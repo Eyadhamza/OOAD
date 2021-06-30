@@ -15,7 +15,7 @@ namespace OOAD
 
          List<Guitar> matchingGuitars = inventory.Search(whatErinLikes);
 
-         if (!matchingGuitars.Any()) {
+         if (matchingGuitars.Any()) {
              Console.WriteLine("Erin, you might like these guitars:");
 
              foreach  (Guitar guitar in matchingGuitars)
@@ -36,7 +36,7 @@ namespace OOAD
          }
         }
         private static void InitializeInventory(Inventory inventory) {
-            // Add guitars to the inventory...
+            inventory.AddGuitar("V95693", 1499.95, Builder.FENDER, "Stratocastor", Type.ELECTRIC, Wood.ALDER, Wood.ALDER);
         }
     }
 }

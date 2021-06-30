@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace OOAD
 {
@@ -18,11 +19,15 @@ namespace OOAD
         }
 
 
-        public void AddGuitar(string serialNumber, double price, Builder builder, string model, Type type, Wood backWood, Wood topWood) {
+        public void AddGuitar(string serialNumber, double price, Builder builder, string model, Type type, Wood backWood, Wood topWood)
+        {
 
-            // Guitar guitar = new Guitar(serialNumber, price, builder, type, backWood, topWood);
+            GuitarSpec spec = new GuitarSpec(10,builder, model, type, backWood, topWood);
 
-            // _guitars.Add(guitar);
+             Guitar guitar = new Guitar(serialNumber, price,spec);
+
+
+             _guitars.Add(guitar);
         }
 
         public Guitar GetGuitar(string serialNumber) {
@@ -40,11 +45,16 @@ namespace OOAD
         public List<Guitar> Search(GuitarSpec searchSpec)
         {
             List<Guitar> matchingGuitars = new List<Guitar>();
-            foreach (Guitar guitar in matchingGuitars)
+
+
+            foreach (Guitar guitar in _guitars)
             {
                 if (guitar.Spec.Matches(searchSpec))
                 {
                     matchingGuitars.Add(guitar);
+                }
+                else
+                {
                 }
             }
             return matchingGuitars;

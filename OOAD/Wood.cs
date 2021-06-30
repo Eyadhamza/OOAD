@@ -15,8 +15,8 @@ static class WoodMethods
     {
         switch (wood)
         {
-            case Wood.INDIAN_ROSEWOOD:
-                return "Indian Rosewood";
+            case Wood.ALDER:
+                return "Alder";
             case Wood.BRAZILIAN_ROSEWOOD:
                 return "Brazilian Rosewood";
             default:

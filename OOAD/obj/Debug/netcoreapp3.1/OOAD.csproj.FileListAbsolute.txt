@@ -1,0 +1,13 @@
+C:\Users\Eyadh\source\repos\OOAD\OOAD\bin\Debug\netcoreapp3.1\OOAD.exe
+C:\Users\Eyadh\source\repos\OOAD\OOAD\bin\Debug\netcoreapp3.1\OOAD.deps.json
+C:\Users\Eyadh\source\repos\OOAD\OOAD\bin\Debug\netcoreapp3.1\OOAD.runtimeconfig.json
+C:\Users\Eyadh\source\repos\OOAD\OOAD\bin\Debug\netcoreapp3.1\OOAD.runtimeconfig.dev.json
+C:\Users\Eyadh\source\repos\OOAD\OOAD\bin\Debug\netcoreapp3.1\OOAD.dll
+C:\Users\Eyadh\source\repos\OOAD\OOAD\bin\Debug\netcoreapp3.1\OOAD.pdb
+C:\Users\Eyadh\source\repos\OOAD\OOAD\obj\Debug\netcoreapp3.1\OOAD.csprojAssemblyReference.cache
+C:\Users\Eyadh\source\repos\OOAD\OOAD\obj\Debug\netcoreapp3.1\OOAD.AssemblyInfoInputs.cache
+C:\Users\Eyadh\source\repos\OOAD\OOAD\obj\Debug\netcoreapp3.1\OOAD.AssemblyInfo.cs
+C:\Users\Eyadh\source\repos\OOAD\OOAD\obj\Debug\netcoreapp3.1\OOAD.csproj.CoreCompileInputs.cache
+C:\Users\Eyadh\source\repos\OOAD\OOAD\obj\Debug\netcoreapp3.1\OOAD.dll
+C:\Users\Eyadh\source\repos\OOAD\OOAD\obj\Debug\netcoreapp3.1\OOAD.pdb
+C:\Users\Eyadh\source\repos\OOAD\OOAD\obj\Debug\netcoreapp3.1\OOAD.genruntimeconfig.cache

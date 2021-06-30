@@ -22,10 +22,10 @@ namespace OOAD
              {
                  GuitarSpec spec = guitar.Spec;
                  Console.WriteLine(" We have a " +
-                                   spec.Builder + " " + spec.Model + " " +
-                                   spec.Type + " guitar:\n " +
-                                   spec.BackWood + " back and sides,\n " +
-                                   spec.TopWood + " top.\n You can have it for only $" +
+                                   spec.Builder.Value() + " " + spec.Model + " " +
+                                   spec.Type.Value() + " guitar:\n " +
+                                   spec.BackWood.Value() + " back and sides,\n " +
+                                   spec.TopWood.Value() + " top.\n You can have it for only $" +
                                    guitar.Price + "!\n ----");
              }
 

@@ -10,7 +10,7 @@
 
     static class TypeMethods
     {
-        public static string ToString(this Type type)
+        public static string Value(this Type type)
         {
             switch (type)
             {

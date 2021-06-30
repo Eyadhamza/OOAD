@@ -12,17 +12,17 @@ namespace OOAD
             set => _guitars = value;
         }
 
-        public Inventory(List<Guitar> guitars)
+        public Inventory()
         {
-            _guitars = guitars;
+             this._guitars =new List<Guitar>();
         }
 
 
         public void AddGuitar(string serialNumber, double price, Builder builder, string model, Type type, Wood backWood, Wood topWood) {
 
-            Guitar guitar = new Guitar(serialNumber, price, builder, type, backWood, topWood);
+            // Guitar guitar = new Guitar(serialNumber, price, builder, type, backWood, topWood);
 
-            _guitars.Add(guitar);
+            // _guitars.Add(guitar);
         }
 
         public Guitar GetGuitar(string serialNumber) {

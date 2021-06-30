@@ -11,7 +11,7 @@
 
 static class WoodMethods
 {
-    public static string toString(this Wood wood)
+    public static string ToString(this Wood wood)
     {
         switch (wood)
         {

@@ -49,14 +49,13 @@ namespace OOAD
 
             foreach (Guitar guitar in _guitars)
             {
+                // delegation of object guitar to do the task that we want!
                 if (guitar.Spec.Matches(searchSpec))
                 {
                     matchingGuitars.Add(guitar);
                 }
-                else
-                {
-                }
             }
+
             return matchingGuitars;
 
         }

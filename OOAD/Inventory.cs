@@ -4,29 +4,37 @@ namespace OOAD
 {
     public class Inventory
     {
-        private LinkedList<Guitar> _guitars;
+        private List<Guitar> _guitars;
 
-        public LinkedList<Guitar> Guitars
+        public List<Guitar> Guitars
         {
             get => _guitars;
             set => _guitars = value;
         }
 
-        public Inventory(LinkedList<Guitar> guitars)
+        public Inventory(List<Guitar> guitars)
         {
             _guitars = guitars;
         }
 
-        public void AddGuitar()
-        {
 
+        public void AddGuitar(string serialNumber, double price, Builder builder, string model, Type type, Wood backWood, Wood topWood) {
 
+            Guitar guitar = new Guitar(serialNumber, price, builder, type, backWood, topWood);
+
+            _guitars.Add(guitar);
         }
 
-        public List<Guitar> GetGuitar()
-        {
+        public Guitar GetGuitar(string serialNumber) {
 
+            foreach (Guitar guitar in _guitars)
+            {
+                if (guitar.SerialNumber.Equals(serialNumber)) {
+                    return guitar;
+                }
+            }
 
+            return null;
         }
 
         public List<Guitar> Search(GuitarSpec searchSpec)

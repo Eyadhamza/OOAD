@@ -49,7 +49,7 @@
             _topWood = topWood;
         }
 
-        public bool Matches(InstrumentSpec guitarSpec)
+        public virtual bool Matches(InstrumentSpec guitarSpec)
         {
             if (_builder != guitarSpec.Builder)
                 return false;

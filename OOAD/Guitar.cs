@@ -1,39 +1,10 @@
 ﻿namespace OOAD
 {
-    public class Guitar
+    public class Guitar: Instrument
     {
-        private string _serialNumber;
-        private double _price;
-        private GuitarSpec _spec;
 
-        public Guitar(GuitarSpec spec)
+        public Guitar(string serialNumber,double price,GuitarSpec spec) : base(serialNumber, price, spec)
         {
-            _spec = spec;
-        }
-
-        public string SerialNumber
-        {
-            get => _serialNumber;
-            set => _serialNumber = value;
-        }
-
-        public double Price
-        {
-            get => _price;
-            set => _price = value;
-        }
-
-        public GuitarSpec Spec
-        {
-            get => _spec;
-            set => _spec = value;
-        }
-
-        public Guitar(string serialNumber,double price,GuitarSpec spec)
-        {
-            this._price = price;
-            this._serialNumber = serialNumber;
-            this._spec = spec;
 
         }
 

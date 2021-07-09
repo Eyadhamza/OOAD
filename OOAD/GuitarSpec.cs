@@ -1,6 +1,6 @@
 ﻿namespace OOAD
 {
-    public class GuitarSpec
+    public class GuitarSpec : InstrumentSpec
     {
         private Builder _builder;
         private string _model;

@@ -21,33 +21,33 @@ namespace OOAD
             _inventory.Add(instrument);
         }
 
-        public Guitar GetGuitar(string serialNumber) {
+        public Instrument GetInstrument(string serialNumber) {
 
-            foreach (Guitar guitar in _guitars)
+            foreach (Instrument instrument in _inventory)
             {
-                if (guitar.SerialNumber.Equals(serialNumber)) {
-                    return guitar;
+                if (instrument.SerialNumber.Equals(serialNumber)) {
+                    return instrument;
                 }
             }
 
             return null;
         }
 
-        public List<Guitar> Search(GuitarSpec searchSpec)
+        public List<Instrument> Search(InstrumentSpec searchSpec)
         {
-            List<Guitar> matchingGuitars = new List<Guitar>();
+            List<Instrument> matchingInstruments = new List<Instrument>();
 
 
-            foreach (Guitar guitar in _guitars)
+            foreach (Instrument instrument in _inventory)
             {
-                // delegation of object guitar to do the task that we want!
-                if (guitar.Spec.Matches(searchSpec))
+                // delegation of object instrument to do the task that we want!
+                if (instrument.Spec.Matches(searchSpec))
                 {
-                    matchingGuitars.Add(guitar);
+                    matchingInstruments.Add(instrument);
                 }
             }
 
-            return matchingGuitars;
+            return matchingInstruments;
 
         }
     }

@@ -6,6 +6,12 @@
         private double _price;
         private InstrumentSpec _spec;
 
+        public InstrumentSpec Spec
+        {
+            get => _spec;
+            set => _spec = value;
+        }
+
         public string SerialNumber
         {
             get => _serialNumber;

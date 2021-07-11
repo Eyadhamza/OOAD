@@ -2,7 +2,7 @@
 {
     public enum Builder
     {
-        FENDER, MARTIN,GIBSON
+        FENDER, MARTIN,GIBSON,COLLINGS
 
 
 
@@ -27,6 +27,8 @@
                     return "Martin";
                 case Builder.GIBSON:
                     return "Gibson";
+                case Builder.COLLINGS:
+                    return "Collings";
                 default:
                     return "What?!";
             }

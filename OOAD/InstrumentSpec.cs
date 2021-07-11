@@ -30,6 +30,7 @@ namespace OOAD
 
             foreach (var property in propertyKeys)
             {
+
                 if (_properties[property] != otherSpec.GetPropertyValue(property.ToString()))
                 {
                     return false;

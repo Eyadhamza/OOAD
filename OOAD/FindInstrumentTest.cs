@@ -27,6 +27,7 @@ namespace OOAD
 
              foreach  (Instrument instrument in matchingInstruments)
              {
+                 Console.WriteLine(instrument);
                  InstrumentSpec spec = instrument.Spec;
                  Console.WriteLine("We have a " + spec.GetPropertyValue("instrumentType") + "with the following properties");
 
@@ -61,8 +62,7 @@ namespace OOAD
             properties.Add("numStrings", 6);
             properties.Add("topWood", Wood.INDIAN_ROSEWOOD);
             properties.Add("backWood", Wood.SITKA);
-            inventory.AddInstrument("11277", 3999.95,
-            new InstrumentSpec(properties));
+            inventory.AddInstrument("11277", 3999.95, new InstrumentSpec(properties));
 
         }
     }

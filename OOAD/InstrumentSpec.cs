@@ -1,68 +1,40 @@
-﻿namespace OOAD
+﻿using System;
+using System.Collections;
+
+namespace OOAD
 {
     public abstract class InstrumentSpec
     {
-        private Builder _builder;
-        private string _model;
-        private Type _type;
-        private Wood _backWood;
-        private Wood _topWood;
+
+        private Hashtable _properties;
 
 
-
-        public Builder Builder
+        public InstrumentSpec(Hashtable properties)
         {
-            get => _builder;
-            set => _builder = value;
+            _properties = properties == null ? new Hashtable() : new Hashtable(properties);
         }
 
-        public string Model
+        public Object GetPropertyValue(string propertyName)
         {
-            get => _model;
-            set => _model = value;
+            return _properties[propertyName];
         }
 
-        public Type Type
+        public ICollection GetPropertiesKeys()
         {
-            get => _type;
-            set => _type = value;
+            return _properties.Keys;
         }
-
-        public Wood BackWood
+        public virtual bool Matches(InstrumentSpec otherSpec)
         {
-            get => _backWood;
-            set => _backWood = value;
-        }
 
-        public Wood TopWood
-        {
-            get => _topWood;
-            set => _topWood = value;
-        }
+            var propertyKeys = GetPropertiesKeys();
 
-        public InstrumentSpec(Builder builder, string model, Type type, Wood backWood, Wood topWood)
-        {
-            _builder = builder;
-            _model = model;
-            _type = type;
-            _backWood = backWood;
-            _topWood = topWood;
-        }
-
-        public virtual bool Matches(InstrumentSpec guitarSpec)
-        {
-            if (_builder != guitarSpec.Builder)
-                return false;
-            string model = _model.ToLower();
-            if ((!model.Equals("")) &&
-                (!model.Equals(guitarSpec.Model.ToLower())))
-                return false;
-            if (_type != guitarSpec.Type)
-                return false;
-            if (_backWood != guitarSpec.BackWood)
-                return false;
-            if (_topWood != guitarSpec.TopWood)
-                return false;
+            foreach (var property in propertyKeys)
+            {
+                if (_properties[property] != otherSpec.GetPropertyValue(property.ToString()))
+                {
+                    return false;
+                }
+            }
 
             return true;
         }

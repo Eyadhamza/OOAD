@@ -5,29 +5,20 @@ namespace OOAD
 {
     public class Inventory
     {
-        private List<Guitar> _guitars;
+        private List <Instrument> _inventory;
 
-        public List<Guitar> Guitars
+        public List<Instrument> Inventory1
         {
-            get => _guitars;
-            set => _guitars = value;
-        }
-
-        public Inventory()
-        {
-             this._guitars =new List<Guitar>();
+            get => _inventory;
+            set => _inventory = value;
         }
 
 
-        public void AddGuitar(string serialNumber, double price, Builder builder, string model, Type type, Wood backWood, Wood topWood)
+        public void AddInstrument(string serialNumber, double price, InstrumentSpec spec)
         {
+            Instrument instrument = new Instrument(serialNumber, price, spec);
 
-            GuitarSpec spec = new GuitarSpec(10,builder, model, type, backWood, topWood);
-
-             Guitar guitar = new Guitar(serialNumber, price,spec);
-
-
-             _guitars.Add(guitar);
+            _inventory.Add(instrument);
         }
 
         public Guitar GetGuitar(string serialNumber) {

@@ -1,6 +1,6 @@
 ﻿namespace OOAD
 {
-    public abstract class Instrument
+    public class Instrument
     {
         private string _serialNumber;
         private double _price;
@@ -19,7 +19,7 @@
         }
 
 
-        protected Instrument(string serialNumber, double price, InstrumentSpec spec)
+        public Instrument(string serialNumber, double price, InstrumentSpec spec)
         {
             _serialNumber = serialNumber;
             _price = price;

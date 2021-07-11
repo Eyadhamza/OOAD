@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace OOAD
 {
-    public abstract class InstrumentSpec
+    public class InstrumentSpec
     {
 
         private Hashtable _properties;

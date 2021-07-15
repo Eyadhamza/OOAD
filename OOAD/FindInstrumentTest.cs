@@ -15,8 +15,8 @@ namespace OOAD
 
          Hashtable properties = new Hashtable();
 
-         properties.Add("builder",Builder.GIBSON);
-         properties.Add("backWood",Wood.MAPLE);
+         properties.Add("builder",Builder.COLLINGS);
+         properties.Add("backWood",Wood.SITKA);
 
          InstrumentSpec whatErinLikes = new InstrumentSpec(properties);
 

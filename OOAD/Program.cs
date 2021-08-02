@@ -4,9 +4,9 @@ namespace OOAD
 {
     class Program
     {
-        // static void Main(string[] args)
-        // {
-        //     Console.WriteLine("Hello !");
-        // }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello !");
+        }
     }
 }
